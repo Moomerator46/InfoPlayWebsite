@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>InfoPlay (WIP)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
                 background-color: black;
@@ -9,7 +10,7 @@
                 margin: 0;
                 color: white;
                 height: 100vh;
-                padding-top: 80px;
+                padding-top: 84px;
                 background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Programming.jpg") center center/cover;
             }
             #about, #games, #socials {
@@ -137,8 +138,7 @@
                 border-top: 1px solid rgba(255, 255, 255, 0.3); /* subtle line */
                 backdrop-filter: blur(8px);          /* frosted glass effect */
                 -webkit-backdrop-filter: blur(8px);
-                color: white;
-                position: relative;                  /* normal flow */
+                color: white;               /* normal flow */
             }
             #nav {
                 position: fixed;
@@ -170,51 +170,56 @@
             html {
                 scroll-behavior: smooth;
             }
+            #content {
+                flex: 1;
+            }
         </style>
     </head>
     <body>
-        <div id="nav">
-            <a href="#anchorone"><strong>About</strong></a>
-            <a href="#anchortwo"><strong>Games</strong></a>
-            <a href="#anchorthree"><strong>Socials</strong></a>
-        </div>
-        <div id="header">
-            <h1>InfoPlay</h1>
-            <h4>The Future</h2>
-        </div>
-        <div id="sections">
-            <span id="anchorone"></span>
-            <div id="about">
-                <center>    
-                    <h1>About Us</h1>
-                    <p>We are an Indie Game Development Group, we like designing games with high effort for everyone to enjoy! We work hard on games so anybody can enjoy them.</p>
-                </center>
+        <div id="content">
+            <div id="nav">
+                <a href="#anchorone"><strong>About</strong></a>
+                <a href="#anchortwo"><strong>Games</strong></a>
+                <a href="#anchorthree"><strong>Socials</strong></a>
             </div>
-            <div id="anchortwo"></div>
-            <div id="games">
-                <center>
-                    <h1>Our Games</h1>
-                    <p>We offer games to play to everyone! We have one named C.C.U! You can play it on itch.io!</p>
-                    <br>
-                    <button id="ccu" onclick="window.open('https://moomerator.itch.io/ccu', '_blank');">Play Now</button>
-                </center>
+            <div id="header">
+                <h1>InfoPlay</h1>
+                <h4>The End of the Beginning</h4>
             </div>
-            <div id="anchorthree"></div>
-            <div id="socials">
-                <center>
-                    <h1>Socials</h1>
-                    <p>We have various platforms that we have made content on! You can go check them out now!</p>
-                    <button id="youtube" onclick="window.open('https://youtube.com/@InfoPlay-Dev', '_blank');"><strong>YouTube</strong></button>
-                    <br>
-                    <button id="bluesky" onclick="window.open('https://bsky.app/profile/infoplaydev.bsky.social', '_blank');">Bluesky</button>
-                    <br>
-                    <button id="discord" onclick="window.open('https://discord.gg/Re4aWXDp3a', '_blank');">Discord Server</button>
-                </center>
+            <div id="sections">
+                <span id="anchorone"></span>
+                <div id="about">
+                    <center>    
+                        <h1>About Us</h1>
+                        <p>We are an Indie Game Development Group, we like designing games with high effort for everyone to enjoy! We work hard on games so anybody can enjoy them.</p>
+                    </center>
+                </div>
+                <div id="anchortwo"></div>
+                <div id="games">
+                    <center>
+                        <h1>Our Games</h1>
+                        <p>We offer games to play to everyone! We have one named C.C.U! You can play it on itch.io!</p>
+                        <br>
+                        <button id="ccu" onclick="window.open('https://moomerator.itch.io/ccu', '_blank');"><strong>Play Now</strong></button>
+                    </center>
+                </div>
+                <div id="anchorthree"></div>
+                <div id="socials">
+                    <center>
+                        <h1>Socials</h1>
+                        <p>We have various platforms that we have made content on! You can go check them out now!</p>
+                        <button id="youtube" onclick="window.open('https://youtube.com/@InfoPlay-Dev', '_blank');"><strong>YouTube</strong></button>
+                        <br>
+                        <button id="bluesky" onclick="window.open('https://bsky.app/profile/infoplaydev.bsky.social', '_blank');"><strong>Bluesky</strong></button>
+                        <br>
+                        <button id="discord" onclick="window.open('https://discord.gg/Re4aWXDp3a', '_blank');"><strong>Discord Server</strong></button>
+                    </center>
+                </div>
             </div>
         </div>
         <footer>
-            <p>2026 InfoPlay.</p>
-            <p>Background image from Wikipedia</p>
+                <p>2026 InfoPlay.</p>
+                <p>Background image from Wikipedia</p>
         </footer>
     </body>
 </html>
