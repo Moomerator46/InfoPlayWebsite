@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InfoPlay (WIP)</title>
+        <meta name="og:title" content="InfoPlay">
+        <meta name="og:description" content="We are an Indie Game Development Group that loves making games that anybody can enjoy!">
+        <meta name="og:type" content="website">
+        <meta name="og:url" content="https://moomerator.com">
+        <style>
+            body {
+                background-color: black;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                color: white;
+                height: 100vh;
+                padding-top: 84px;
+                background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Programming.jpg") center center/cover;
+            }
+            #about, #games, #socials {
+                position: relative;          /* needed for pseudo-element offset */
+            }
+
+            #about::before,
+            #games::before,
+            #socials::before {
+                content: "";
+                display: block;
+                height: 100px;               /* height of your navbar */
+                margin-top: -100px;          /* pulls the section up */
+                visibility: hidden;          /* invisible spacer */
+            }
+
+            #header {
+                text-align: center;
+                padding: 20px 0;
+                border-bottom: 2px solid white;
+                background-color: gray;
+                margin-bottom: 30px;
+            }
+            #sections {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 30px;
+                
+            }
+            #about {
+                border-radius: 15px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 40px 40px;
+                max-width: 600px;
+            }
+            #games {
+                border-radius: 15px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 40px 40px;
+                max-width: 600px;
+                margin: 20px 20px;
+            }
+            #socials, #team {
+                border-radius: 15px;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 40px 40px;
+                max-width: 600px;
+                margin: 20px 20px;
+            }
+            button {
+                padding: 15px 30px;
+                background-color: #ff44ff;
+                border-radius: 8px;
+                border: 2px solid white;
+                cursor: pointer;
+                transition: all 0.4s ease-in-out;
+                color: white;
+                margin: 10px 10px;
+            }
+
+            button:hover {
+                background-color: #ff0000;
+                transform: scale(1.2);
+            }
+            footer {
+                text-align: center;                  /* center text */
+                padding: 20px 0;                     /* space inside */
+                background-color: rgba(255, 255, 255, 0.1); /* semi-transparent glass style */
+                border-top: 1px solid rgba(255, 255, 255, 0.3); /* subtle line */
+                backdrop-filter: blur(8px);          /* frosted glass effect */
+                -webkit-backdrop-filter: blur(8px);
+                color: white;
+                margin-top: 300px;               /* normal flow */
+            }
+            #nav {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                background-color: gray;
+                padding: 20px 40px;
+                box-sizing: border-box;
+                z-index: 1000;
+                border-bottom: 2px solid white;
+            }
+            #nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 20px;
+                padding: 12px 12px;
+                border-radius: 6px;
+            }
+            #anchorone,
+            #anchortwo,
+            #anchorthree,
+            #anchorfour {
+                display: block;       /* makes them block-level elements */
+                height: 100px;        /* same height as your fixed navbar */
+                margin-top: -100px;   /* offset the element upwards */
+                visibility: hidden;   /* invisible but still takes space */
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            #content {
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div id="nav">
+                <a href="https://moomerator.com"><strong>Home</strong></a>
+            </div>
+            <div id="header">
+                <h1>Games</h1>
+            </div>
+            <div id="sections">
+                <div id="games">
+                    <center>
+                        <h1>Games</h1>
+                        <p>Here you can preview and play our games!</p>
+                        <br>
+                        <button onclick="window.open('https://moomerator.com/games/ccu/', '_blank');"><strong>C.C.U</strong></button>
+                        <br>
+                        <button><strong>Evlabs</strong></button>
+                        <br>
+                        <button><strong>Blubo's Adventure</strong></button>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <footer>
+                <p>2026 InfoPlay.</p>
+                <p>Background image from Wikipedia</p>
+        </footer>
+    </body>
+</html>
