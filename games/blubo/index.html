@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>C.C.U</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: #0099ff;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #info {
+                display: flex;
+                /* align-items: center; */
+                justify-content: center;
+            }
+            #sideinfo {
+                background-color:#003a61;
+                padding: 20px 20px;
+                align-items: center;
+                justify-content: center;
+                display:flex;
+                flex-direction: column;
+            }
+            #maininfo {
+                background-color:#005892;
+                padding: 20px;
+                min-width: 545px;
+                max-width: 545px;
+            }
+            #get {
+                background-color:#00328f;
+                padding: 20px 20px;
+                width: 801px;
+            }
+            #getdemo {
+                padding: 20px 20px;
+                width: 801px;
+                background-color:#034bd1
+            }
+            #flexboxdiv, #flexboxdivtwo {
+                display: flex;
+                justify-content: center;
+            }
+            #download {
+                background-color: #00d400;
+                color: white;
+                border: 1px solid white;
+                padding: 10px 10px;
+                cursor: pointer;
+            }
+            #download:hover {
+                background-color:#008b00;
+            }
+            #back {
+                background-color: #ff0000;
+                color: white;
+                border: 1px solid white;
+                padding: 10px 10px;
+                cursor: pointer;
+            }
+            #back:hover {
+                background-color:#990000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ccu">
+            <div id="info">
+                <div id="sideinfo">
+                    <p>Made By: Michael Jones</p>
+                    <p>Made In: Godot</p>
+                    <p>Soundtrack By: Michael Jones</p>
+                </div>
+                <div id="maininfo">
+                    <h1>Blubo's Adventure 1 & 2</h1>
+                    <p>Release Date: <strong>June 21st, 2024/2027</strong></p>
+                    <br>
+                    <p>A short 2D Precision Platformer where you need to stop someone to end the world's endless anarchy.</p>
+                </div>
+            </div>
+            <div id="flexboxdiv">
+                <div id="get">
+                    <h1>Get Blubo's Adventure</h1>
+                    <button id="download" onclick="window.open('https://moomerator.itch.io/blubos-adventure/', '_blank');"><strong>Download</strong></button>
+                </div>
+            </div>
+            <div id="flexboxdivtwo">
+                <div id="getdemo">
+                    <h1>Get Blubo's Adventure 2 Demo</h1>
+                    <button id="download" onclick="window.open('https://moomerator.itch.io/blubos-adventure-2/', '_blank');"><strong>Download</strong></button>
+                    <button id="back" onclick="window.open('https://moomerator.com/games', '_blank');"><strong>Back</strong></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
