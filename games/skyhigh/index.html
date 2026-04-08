@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EVLABS</title>
+        <title>SkyHigh</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
-                background-color: #0099ff;
+                background: url("bg.png");
                 color: white;
                 font-family: Arial, Helvetica, sans-serif;
             }
@@ -62,33 +62,43 @@
             #back:hover {
                 background-color:#990000;
             }
+            #banner img {
+                width: 840px;          /* Match #get and #getdemo */
+                max-width: 100%;       /* Ensures it never overflows */
+                height: auto;          /* Maintains aspect ratio */
+                display: block;        /* Removes any extra spacing below the image */
+                margin: 0 auto;        /* Optional: center the image if needed */
+            }   
         </style>
     </head>
     <body>
         <div id="ccu">
+            <div id="banner">
+                    <img src="banner.png">
+            </div>
             <div id="info">
                 <div id="sideinfo">
-                    <p>Made By: InfoPlay</p>
-                    <p>Made In: Unity or PlayCanvas</p>
+                    <p>Made By: Michael Jones</p>
+                    <p>Made In: Godot</p>
                     <p>Soundtrack By: Michael Jones</p>
                 </div>
                 <div id="maininfo">
-                    <h1>Evlabs</h1>
-                    <p>Release Date: <strong>2027</strong></p>
+                    <h1>SkyHigh</h1>
+                    <p>Release Date: <strong>TBA</strong></p>
                     <br>
-                    <p>A fast paced action shooter where you need to stop a company from destroying the world.</p>
+                    <p>A First-Person Vertical Ascent Platformer where you jump on platforms to eventually reach The Final Frontier</p>
                 </div>
             </div>
             <div id="flexboxdiv">
                 <div id="get">
-                    <h1>Get Evlabs</h1>
-                    <p>Evlabs is not released yet, but will release <strong>2027</strong></p>
+                    <h1>Get SkyHigh</h1>
+                    <p>Evlabs is not released yet, but will release <strong>TBA</strong></p>
                 </div>
             </div>
             <div id="flexboxdivtwo">
                 <div id="getdemo">
-                    <h1>Get Evlabs Prototype</h1>
-                    <button id="download" onclick="window.open('https://moomerator.itch.io/evlabs/', '_blank');"><strong>Download</strong></button>
+                    <h1>Get SkyHigh Demo</h1>
+                    <p>The SkyHigh Demo is not released yet, but will release <strong>2026</strong></p>
                     <button id="back" onclick="window.open('https://moomerator.com/games', '_blank');"><strong>Back</strong></button>
                 </div>
             </div>
