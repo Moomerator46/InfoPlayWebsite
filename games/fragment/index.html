@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fragment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background: url("bg.png");
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #info {
+                display: flex;
+                /* align-items: center; */
+                justify-content: center;
+            }
+            #sideinfo {
+                background-color:#003a61;
+                padding: 20px 20px;
+                align-items: center;
+                justify-content: center;
+                display:flex;
+                flex-direction: column;
+            }
+            #maininfo {
+                background-color:#005892;
+                padding: 20px;
+                min-width: 545px;
+                max-width: 545px;
+            }
+            #get {
+                background-color:#00328f;
+                padding: 20px 20px;
+                width: 801px;
+            }
+            #getdemo {
+                padding: 20px 20px;
+                width: 801px;
+                background-color:#034bd1
+            }
+            #flexboxdiv, #flexboxdivtwo {
+                display: flex;
+                justify-content: center;
+            }
+            #download {
+                background-color: #00d400;
+                color: white;
+                border: 1px solid white;
+                padding: 10px 10px;
+                cursor: pointer;
+            }
+            #download:hover {
+                background-color:#008b00;
+            }
+            #back {
+                background-color: #ff0000;
+                color: white;
+                border: 1px solid white;
+                padding: 10px 10px;
+                cursor: pointer;
+            }
+            #back:hover {
+                background-color:#990000;
+            }
+            #banner img {
+                width: 840px;          /* Match #get and #getdemo */
+                max-width: 100%;       /* Ensures it never overflows */
+                height: auto;          /* Maintains aspect ratio */
+                display: block;        /* Removes any extra spacing below the image */
+                margin: 0 auto;        /* Optional: center the image if needed */
+            }   
+        </style>
+    </head>
+    <body>
+        <div id="ccu">
+            <div id="banner">
+                    <img src="banner.png">
+            </div>
+            <div id="info">
+                <div id="sideinfo">
+                    <p>Made By: Michael Jones</p>
+                    <p>Made In: Godot</p>
+                    <p>Soundtrack By: Michael Jones</p>
+                </div>
+                <div id="maininfo">
+                    <h1>Fragment</h1>
+                    <p>Release Date: <strong>TBA</strong></p>
+                    <br>
+                    <p>A 3D First-Person Open-World Adventure game where you try to repair The Gem.</p>
+                </div>
+            </div>
+            <div id="flexboxdiv">
+                <div id="get">
+                    <h1>Get Fragment</h1>
+                    <p>Fragment is not released yet, but will release <strong>TBA</strong></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

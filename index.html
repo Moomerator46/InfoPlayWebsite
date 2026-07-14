@@ -7,6 +7,9 @@
         <meta name="og:description" content="We are an Indie Game Development Group that loves making games that anybody can enjoy!">
         <meta name="og:type" content="website">
         <meta name="og:url" content="https://moomerator.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
         <style>
             body {
                 background-color: black;
@@ -178,15 +181,60 @@
             #content {
                 flex: 1;
             }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-button {
+                padding: 10px;
+                background-color: #f1f1f1;
+                border: 1px solid #ccc;
+                cursor: pointer;
+            }
+            .dropdown-content {
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                background-color: #fff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                z-index: 1;
+                border-radius: 15px;
+                overflow: hidden;
+                transition: opacity 0.4s ease-in-out;
+                font-family: DM Sans;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+            }
+            .dropdown-content a:hover {
+                background: linear-gradient(to bottom, #00B0FF, #0066cc);
+                color: white;
+            }
+            .dropdown-content.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .dropdown-content a:active {
+                background: linear-gradient(to top, #00B0FF, #0066cc);
+            }
         </style>
     </head>
     <body>
         <div id="content">
             <div id="nav">
-                <a href="#anchorone"><strong>About</strong></a>
-                <a href="#anchortwo"><strong>Games</strong></a>
-                <a href="#anchorthree"><strong>Socials</strong></a>
-                <a href="https://moomerator.com/games"><strong>Play</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown()">Choose an Option</button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#">Option 1</a>
+                        <a href="#">Option 2</a>
+                        <a href="#">Option 3</a>
+                    </div>
+                </div>
             </div>
             <div id="header">
                 <h1>InfoPlay</h1>
@@ -206,7 +254,7 @@
                         <h1>Our Games</h1>
                         <p>We offer games to play to everyone! We have one named C.C.U! You can play it on itch.io!</p>
                         <br>
-                        <button id="ccu" onclick="window.open('https://moomerator.com/games/ccu', '_blank');"><strong>Play Now</strong></button>
+                        <button id="ccu" onclick="window.open('https://www.moomerator.com/games/ccu', '_blank');"><strong>Play Now</strong></button>
                     </center>
                 </div>
                 <div id="anchorthree"></div>
@@ -237,5 +285,20 @@
                 <p>2026 InfoPlay.</p>
                 <p>Background image from Wikipedia</p>
         </footer>
+        <script>
+            function toggleDropdown() {
+                const dropdown = document.getElementById('dropdownContent');
+                dropdown.classList.toggle('active');
+            }
+
+            // Close dropdown when clicking outside
+            window.addEventListener('click', function(e) {
+                const dropdown = document.getElementById('dropdownContent');
+                const button = document.querySelector('.dropdown-button');
+                if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+    </script>
     </body>
 </html>
